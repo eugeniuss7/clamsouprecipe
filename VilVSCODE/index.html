@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLAM SOUP RECIPE - EUGENE VILLEGAS</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+    function showContent(content){
+        document.querySelectorAll('.contenters').forEach(div => {
+            div.style.display = 'none';
+        });
+        document.querySelector(`#${content}`).style.display = 'block';
+        
+    }
+    document.addEventListener('DOMContentLoaded', function(){
+        document.querySelectorAll('.mix').forEach(button => {
+            button.onclick = function(){
+                showContent(this.dataset.content), activeButton(this.id)
+            }
+        });
+    });
+    function activeButton(activeBtn){
+        document.querySelectorAll('.nav-container button').forEach(button =>{
+            button.className = 'none';
+        });
+        document.querySelector(`#${activeBtn}`).className = "active";
+    }
+</script>
+</head>
+<body>
+    <div class="hcont">
+        <span>
+            <h1>
+            CLAM SOUP RECIPE
+            <img src="pog.jpeg" style="width: 47px; height: 47px;">
+            </h1>
+            
+        </span>
+        
+    </div>
+    <button class="mix" type = "button" data-content="step1">
+        <h1 style="color: violet; margin-top: 4px;">Step 1</h1>
+    </button>
+    <button class="mix" type = "button" data-content="step2">
+        <h1 style="color: violet; margin-top: 4px;">Step 2</h1>
+    </button>
+    <button class="mix" type = "button" data-content="step3">
+        <h1 style="color: violet; margin-top: 4px;">Step 3</h1>
+    </button>
+    <button class="mix" type = "button" data-content="step4">
+        <h1 style="color: violet; margin-top: 4px;">Step 4</h1>
+    </button>
+    <button class="mix" type = "button" data-content="step5">
+        <h1 style="color: violet; margin-top: 4px;">Step 5</h1>
+    </button>
+    <button class="mix" type = "button" data-content="step6">
+        <h1 style="color: violet; margin-top: 4px;">Step 6</h1>
+    </button>
+    <button class="mix" type = "button" data-content="step7">
+        <h1 style="color: violet; margin-top: 4px;">Step 7</h1>
+    </button>
+    <div class="contenters" id="step1">
+            <p class="letters">
+                Boil the water in a stockpot
+            </p>
+            <img class="pic" src="pot.jpg">
+    </div>
+    <div class="contenters" id="step2">
+            <p class="letters">
+                Add the ginger and onion. Cover and continue to boil in medium heat for 3 to 5 minutes.
+            </p>
+            <img class="pic" src="onigin.jpg">
+    </div>
+    <div class="contenters" id="step3">
+            <p class="letters">
+                Stir-in the clams. Simmer for 5 to 10 minutes.
+            </p>
+            <img class="pic" src="clammy.jpg">
+    </div>
+    <div class="contenters" id="step4">
+            <p class="letters">
+                Add-in the spinach. Cover and cook for a minute more.
+            </p>
+            <img class="pic" src="spin.jpg">
+    </div>
+    <div class="contenters" id="step5">
+            <p class="letters">
+                Sprinkle some salt and freshly ground black pepper to taste.
+            </p>
+            <img class="pic" src="aspep.jpg">
+    </div>
+    <div class="contenters" id="step6">
+            <p class="letters">
+                Transfer to a serving bowl.
+            </p>
+            <img class="pic" src="clam.jpg">
+    </div>
+    <div class="contenters" id="step7">
+            <p class="letters">
+                Serve. Share and enjoy!
+            </p>
+            <img class="pic" src="serc.jpg">
+    </div>
+</body>
+</html>
